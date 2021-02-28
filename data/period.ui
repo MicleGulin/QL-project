@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Period</class>
+ <widget class="QDialog" name="Period">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>251</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Период наблюдения</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>180</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>160</width>
+     <height>157</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QCheckBox" name="checkBox_monday">
+      <property name="text">
+       <string>Понедельник</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_tuesday">
+      <property name="text">
+       <string>Вторник</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_Wednesday">
+      <property name="text">
+       <string>Среда</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_thursday">
+      <property name="text">
+       <string>Четверг</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_friday">
+      <property name="text">
+       <string>Пятница</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_saturday">
+      <property name="text">
+       <string>Суббота</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_sunday">
+      <property name="text">
+       <string>Воскресенье</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_weekday</string>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>10</y>
+     <width>201</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QTimeEdit" name="timeEdit_end"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTimeEdit" name="timeEdit_begin"/>
+    </item>
+    <item row="1" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_begin">
+      <property name="text">
+       <string>Начало</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_end">
+      <property name="text">
+       <string>Конец</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Period</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Period</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="buttonGroup_weekday"/>
+ </buttongroups>
+</ui>
